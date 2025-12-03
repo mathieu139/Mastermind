@@ -29,7 +29,7 @@ for ($tentative = 1; $tentative <= MAX_TENTATIVES; $tentative++) {
     if ($a != $combinaisonSecrete) {
         $couleurEssayer = str_split($a);
 
-        if (strlen($a) != 4) {
+        if (strlen($a) > 4 or strlen($a) < 4) {
             echo "Le nombre de caractère est incorrecte";
             #        }elseif () {
             $tentative--;

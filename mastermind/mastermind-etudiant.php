@@ -42,8 +42,8 @@ $combinaisonSecrete = [];
 #}
 for ($i = 0; $i < LONGUEUR_CODE; $i++) {
     $combinaisonSecrete[$i] = $initialesCouleurs[array_rand($initialesCouleurs)];
-    echo $combinaisonSecrete[$i];
-    print_r($combinaisonSecrete);
+    #    echo $combinaisonSecrete[$i];
+#    print_r($combinaisonSecrete);
 }
 $solution = implode('', $combinaisonSecrete);
 #echo "Combinaison secrète (pour test) : " . $combinaisonSecrete . "\n";
@@ -66,10 +66,9 @@ for ($tentative = 1; $tentative <= MAX_TENTATIVES; $tentative++) {
     $saisie = str_replace(' ', '', $saisie);
     echo "\nVous avez saisi : $saisie\n" . PHP_EOL;
 
-
     $verife = false;
     #Verification de la combinaison
-    if ($saisie != $solution) {
+    if ($verife == false) {
         $couleurEssayer = str_split($saisie);
 
         if (strlen($saisie) != 4) {
@@ -83,7 +82,6 @@ for ($tentative = 1; $tentative <= MAX_TENTATIVES; $tentative++) {
             $tentative--;
         }
 
-    } else {
         $verife = true;
     }
 }
@@ -183,3 +181,4 @@ foreach ($combinaisonSecrete as $initiale) {
 echo "\n\n================================================================\n";
 echo "                        FIN DU JEU\n";
 echo "================================================================\n";
+?>
